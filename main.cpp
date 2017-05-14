@@ -30,7 +30,6 @@ constexpr double CIRCLE_RAD		= PI * 2;
 
 int main()
 {
-	Test;
 	namespace chrono		= std::chrono;
 	auto timer				= chrono::steady_clock();
 	auto program_start_time	= timer.now();
