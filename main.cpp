@@ -105,6 +105,7 @@ int main()
 	// see how long the resource loading took
 	std::cout << "Load time: " << chrono::duration_cast<chrono::milliseconds>( timer.now() - program_start_time ).count() << std::endl;
 
+	// basic timer for fps counter
 	auto last_time			= timer.now();
 	uint64_t frame_counter	= 0;
 	uint64_t fps			= 0;
