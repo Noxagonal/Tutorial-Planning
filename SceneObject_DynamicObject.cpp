@@ -22,6 +22,7 @@ SceneObject_DynamicObject::SceneObject_DynamicObject( Renderer * renderer, Surfa
 	_InitMeshBuffers();
 	_Allocate_ObjectUBO();
 	_descriptor_set_info.descriptor_set			= _ref_renderer->AllocateDescriptorSet( DESCRIPTOR_SET_TYPE::SCENE_OBJECT );
+	_UpdateDescriptorSet_ObjectUBO();
 }
 
 SceneObject_DynamicObject::SceneObject_DynamicObject( Renderer * renderer, Surface * object_material, std::string path )
@@ -37,6 +38,7 @@ SceneObject_DynamicObject::SceneObject_DynamicObject( Renderer * renderer, Surfa
 	_InitMeshBuffers();
 	_Allocate_ObjectUBO();
 	_descriptor_set_info.descriptor_set			= _ref_renderer->AllocateDescriptorSet( DESCRIPTOR_SET_TYPE::SCENE_OBJECT );
+	_UpdateDescriptorSet_ObjectUBO();
 }
 
 SceneObject_DynamicObject::~SceneObject_DynamicObject()
@@ -54,7 +56,7 @@ void SceneObject_DynamicObject::CmdRender( VkCommandBuffer command_buffer )
 {
 	// update and bind object shader data
 	_Update_ObjectUBO();
-	_UpdateDescriptorSet_ObjectUBO();
+//	_UpdateDescriptorSet_ObjectUBO();
 	_CmdBindDescriptorSet_ObjectUBO( command_buffer );
 
 	// update and bind material shader data

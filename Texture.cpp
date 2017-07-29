@@ -20,7 +20,7 @@ struct MipMap
 
 uint32_t RoundToMultipleOf( uint32_t value, uint32_t multiple_of )
 {
-	return ( value / multiple_of + !!( value % multiple_of ) ) * multiple_of;
+	return ( ( value / multiple_of + !!( value % multiple_of ) ) * multiple_of );
 }
 
 Texture::Texture( Renderer * renderer, std::wstring path )

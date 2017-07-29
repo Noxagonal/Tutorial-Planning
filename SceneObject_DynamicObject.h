@@ -31,7 +31,7 @@ public:
 
 	void						SetSurface( Surface * surface );
 
-private:
+//private:
 	VkBuffer					_Get_ObjectUBO();
 	void						_Update_ObjectUBO();
 
