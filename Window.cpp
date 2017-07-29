@@ -74,10 +74,7 @@ void Window::BeginRender()
 
 void Window::EndRender( std::vector<VkSemaphore> wait_semaphores )
 {
-	// Bug in one of the validation layers resulting running out of presentable images to aquire, temporary fix
-	// is to set present_result to VK_SUCCESS until newer than 1.0.46.0 version of the SDK is available.
-//	VkResult present_result = VkResult::VK_RESULT_MAX_ENUM;
-	VkResult present_result = VkResult::VK_SUCCESS;
+	VkResult present_result = VkResult::VK_RESULT_MAX_ENUM;
 
 	VkPresentInfoKHR present_info {};
 	present_info.sType					= VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
