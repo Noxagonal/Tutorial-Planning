@@ -1,8 +1,11 @@
 Planning source code for my YouTube Vulkan tutorials: https://www.youtube.com/playlist?list=PLUXvZMiAqNbK8jd7s52BIDtCbZnKNGp0P
 
 
+![Screenshot](screenshot.png)
+
+
 Windows only, sorry... Contact me if you want to make a branch for other OSes.
-Visual Studio Community 2015 only, you can update if you want but you'll have to check the paths.
+Visual Studio Community 2017 only, you can update if you want but you'll have to check the paths.
 
 
 You'll need at least 2 extra libraries for this project to compile:
