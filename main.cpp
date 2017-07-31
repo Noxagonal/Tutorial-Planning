@@ -59,6 +59,7 @@ int main()
 	Surface_Plain dragon_head_surface( &renderer, &plain_pipeline, &dragon_head_diff );
 	Surface_Plain monkey_surface( &renderer, &plain_pipeline, &monkey_diff );
 
+
 	// camera
 	SceneObject_Camera camera( &renderer );
 	camera.position		= { 0.5, -0.8, -1.0 };
