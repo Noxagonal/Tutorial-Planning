@@ -12,6 +12,7 @@ SceneObject_Camera::SceneObject_Camera( Renderer * renderer )
 	_descriptor_set			= _ref_renderer->AllocateDescriptorSet( DESCRIPTOR_SET_TYPE::CAMERA );
 
 	_InitCameraShaderDataBuffer();
+	_UpdateDescriptorSet_CameraUBO();
 }
 
 
@@ -48,7 +49,7 @@ void SceneObject_Camera::CmdUpdateUBOAndBindDescriptorSetsForPipeline(
 	float far_plane )
 {
 	_Update_CameraUBO( fov_angle, viewport_size, near_plane, far_plane );
-	_UpdateDescriptorSet_CameraUBO();
+//	_UpdateDescriptorSet_CameraUBO();	// Only needed to do once in our case so this call is moved to a constructor
 	_CmdBindDescriptorSet_CameraUBO( command_buffer );
 }
 

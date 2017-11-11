@@ -56,7 +56,7 @@ void SceneObject_DynamicObject::CmdRender( VkCommandBuffer command_buffer )
 {
 	// update and bind object shader data
 	_Update_ObjectUBO();
-//	_UpdateDescriptorSet_ObjectUBO();
+//	_UpdateDescriptorSet_ObjectUBO();	// Only needed to do once in our case so this call is moved to a constructor
 	_CmdBindDescriptorSet_ObjectUBO( command_buffer );
 
 	// update and bind material shader data
